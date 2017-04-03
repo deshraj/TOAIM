@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>What do you think an AI today can do?</title>
+    <link rel="stylesheet" href="./What do you think an AI today can do__files/materialize.min.css">
+    <link href="./What do you think an AI today can do__files/icon" rel="stylesheet">
+    <link href="./What do you think an AI today can do__files/css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <meta name="description" content="AMT interface: What do you think an AI today can do?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="./What do you think an AI today can do__files/jquery-2.1.1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/jquery-ui.min.js"></script>
+    <script src="./What do you think an AI today can do__files/materialize.min.js"></script>
+    <script src="./What do you think an AI today can do__files/mousetrap.min.js"></script>
+    <!--The "head" JS extracts information from the URL that is going to be needed
+            to set up the HIT early. (This gets loaded before the body.) -->
+    <script src="./What do you think an AI today can do__files/helper_funcs.js"></script>
+    <script type="text/javascript">
+        var JSON_LOADED = {"img_attention_list": ["COCO_val2014_000000100001_1000012_q.jpg", "COCO_val2014_000000208050_2080501_q.jpg", "COCO_val2014_000000528821_5288211_q.jpg", "COCO_val2014_000000404263_4042630_q.jpg", "COCO_val2014_000000221303_2213032_q.jpg", "COCO_val2014_000000414934_4149341_q.jpg", "COCO_val2014_000000115823_1158231_q.jpg", "COCO_val2014_000000292464_2924641_q.jpg", "COCO_val2014_000000265677_2656771_q.jpg", "COCO_val2014_000000189197_1891970_q.jpg", "COCO_val2014_000000334511_3345110_q.jpg", "COCO_val2014_000000318585_3185852_q.jpg", "COCO_val2014_000000088436_884362_q.jpg", "COCO_val2014_000000419344_4193442_q.jpg", "COCO_val2014_000000089027_890270_q.jpg", "COCO_val2014_000000526186_5261861_q.jpg", "COCO_val2014_000000511599_5115992_q.jpg", "COCO_val2014_000000074241_742411_q.jpg", "COCO_val2014_000000456199_4561992_q.jpg", "COCO_val2014_000000244197_2441971_q.jpg", "COCO_val2014_000000353321_3533211_q.jpg", "COCO_val2014_000000125556_1255560_q.jpg", "COCO_val2014_000000435012_4350121_q.jpg", "COCO_val2014_000000345520_3455202_q.jpg", "COCO_val2014_000000161799_1617991_q.jpg", "COCO_val2014_000000284749_2847490_q.jpg", "COCO_val2014_000000368459_3684592_q.jpg", "COCO_val2014_000000254828_2548281_q.jpg", "COCO_val2014_000000456968_4569681_q.jpg", "COCO_val2014_000000541055_5410552_q.jpg", "COCO_val2014_000000248206_2482061_q.jpg", "COCO_val2014_000000252135_2521352_q.jpg", "COCO_val2014_000000204206_2042061_q.jpg", "COCO_val2014_000000062566_625662_q.jpg", "COCO_val2014_000000172946_1729461_q.jpg", "COCO_val2014_000000168355_1683550_q.jpg", "COCO_val2014_000000054763_547630_q.jpg", "COCO_val2014_000000362852_3628521_q.jpg", "COCO_val2014_000000155811_1558111_q.jpg", "COCO_val2014_000000480311_4803112_q.jpg", "COCO_val2014_000000507080_5070801_q.jpg", "COCO_val2014_000000313922_3139221_q.jpg", "COCO_val2014_000000155644_1556441_q.jpg", "COCO_val2014_000000291551_2915511_q.jpg", "COCO_val2014_000000115521_1155211_q.jpg", "COCO_val2014_000000189566_1895661_q.jpg", "COCO_val2014_000000469085_4690851_q.jpg", "COCO_val2014_000000326541_3265412_q.jpg", "COCO_val2014_000000426238_4262382_q.jpg", "COCO_val2014_000000050926_509261_q.jpg", "COCO_val2014_000000404546_4045462_q.jpg", "COCO_val2014_000000017869_178692_q.jpg", "COCO_val2014_000000412204_4122042_q.jpg", "COCO_val2014_000000032901_329010_q.jpg", "COCO_val2014_000000464098_4640982_q.jpg", "COCO_val2014_000000304924_3049241_q.jpg", "COCO_val2014_000000276215_2762152_q.jpg", "COCO_val2014_000000524681_5246811_q.jpg", "COCO_val2014_000000047516_475162_q.jpg", "COCO_val2014_000000306139_3061391_q.jpg", "COCO_val2014_000000328462_3284621_q.jpg", "COCO_val2014_000000253474_2534741_q.jpg", "COCO_val2014_000000207108_2071081_q.jpg", "COCO_val2014_000000363241_3632410_q.jpg", "COCO_val2014_000000033697_336972_q.jpg", "COCO_val2014_000000512151_5121511_q.jpg", "COCO_val2014_000000315991_3159911_q.jpg", "COCO_val2014_000000506751_5067511_q.jpg", "COCO_val2014_000000521669_5216692_q.jpg", "COCO_val2014_000000265789_2657890_q.jpg", "COCO_val2014_000000022213_222131_q.jpg", "COCO_val2014_000000273855_2738552_q.jpg", "COCO_val2014_000000445766_4457661_q.jpg", "COCO_val2014_000000033683_336831_q.jpg", "COCO_val2014_000000061722_617222_q.jpg", "COCO_val2014_000000352478_3524782_q.jpg", "COCO_val2014_000000546052_5460521_q.jpg", "COCO_val2014_000000523033_5230331_q.jpg", "COCO_val2014_000000325873_3258731_q.jpg", "COCO_val2014_000000276024_2760242_q.jpg", "COCO_val2014_000000036451_364512_q.jpg", "COCO_val2014_000000215072_2150722_q.jpg", "COCO_val2014_000000548246_5482462_q.jpg", "COCO_val2014_000000459195_4591952_q.jpg", "COCO_val2014_000000290750_2907501_q.jpg", "COCO_val2014_000000339177_3391771_q.jpg", "COCO_val2014_000000426165_4261652_q.jpg", "COCO_val2014_000000071826_718261_q.jpg", "COCO_val2014_000000065455_654552_q.jpg", "COCO_val2014_000000180011_1800112_q.jpg", "COCO_val2014_000000459182_4591821_q.jpg", "COCO_val2014_000000198530_1985300_q.jpg", "COCO_val2014_000000347506_3475062_q.jpg", "COCO_val2014_000000254869_2548692_q.jpg", "COCO_val2014_000000196421_1964212_q.jpg", "COCO_val2014_000000034464_344642_q.jpg", "COCO_val2014_000000520264_5202641_q.jpg", "COCO_val2014_000000465007_4650072_q.jpg", "COCO_val2014_000000287914_2879142_q.jpg", "COCO_val2014_000000325483_3254832_q.jpg"], "ans_confidence_list": [], "gt_acc_list": [1.0, 0.333333333333, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.333333333333, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.333333333333, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.666666666667, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.333333333333, 0.333333333333, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0], "q_attention_list": [{"How": 0.1036735400557518, "there": 0.1590503603219986, "people": 0.2963339388370514, "are": 0.18855153024196625, "many": 0.10239998996257782}, {"How": 0.30772367119789124, "there": 0.058365415781736374, "people": 0.18856103718280792, "are": 0.08099503815174103, "many": 0.3101373612880707}, {"How": 0.14431528747081757, "there": 0.20164074003696442, "people": 0.11571086943149567, "are": 0.18394990265369415, "many": 0.1455630511045456}, {"How": 0.2623453736305237, "there": 0.10674253106117249, "people": 0.15353204309940338, "are": 0.115597665309906, "many": 0.2609408497810364}, {"How": 0.4219472110271454, "there": 0.030271954834461212, "people": 0.05853283405303955, "are": 0.03811637684702873, "many": 0.42268291115760803}, {"How": 0.4210362732410431, "there": 0.028989478945732117, "people": 0.05327353626489639, "are": 0.04266819357872009, "many": 0.4277757406234741}, {"How": 0.24869297444820404, "there": 0.10827366262674332, "people": 0.15861709415912628, "are": 0.12726575136184692, "many": 0.25195005536079407}, {"How": 0.4031713008880615, "there": 0.03032994642853737, "people": 0.08950787037611008, "are": 0.046259425580501556, "many": 0.40405604243278503}, {"How": 0.42229586839675903, "there": 0.02794683910906315, "people": 0.06456796079874039, "are": 0.03501393646001816, "many": 0.42250123620033264}, {"How": 0.04127682000398636, "there": 0.250476211309433, "people": 0.16568784415721893, "are": 0.24192214012145996, "many": 0.04109525680541992}, {"How": 0.4418959319591522, "there": 0.026265526190400124, "people": 0.035909056663513184, "are": 0.025188114494085312, "many": 0.4439976215362549}, {"How": 0.4198317229747772, "there": 0.02941327914595604, "people": 0.05106867104768753, "are": 0.043137095868587494, "many": 0.4298097789287567}, {"How": 0.46996381878852844, "there": 0.012220941483974457, "people": 0.023206327110528946, "are": 0.01413721963763237, "many": 0.46839040517807007}, {"How": 0.46621155738830566, "there": 0.010525457561016083, "people": 0.027904096990823746, "are": 0.015340848825871944, "many": 0.4700900912284851}, {"How": 0.4433308243751526, "there": 0.02140766754746437, "people": 0.03950276970863342, "are": 0.02735930308699608, "many": 0.44804471731185913}, {"How": 0.3769364058971405, "there": 0.044053222984075546, "people": 0.10112597793340683, "are": 0.06151754409074783, "many": 0.37445133924484253}, {"How": 0.4793679714202881, "there": 0.006710876245051622, "people": 0.016322530806064606, "are": 0.009242432191967964, "many": 0.4818909466266632}, {"How": 0.2182639241218567, "there": 0.15387286245822906, "people": 0.11302643269300461, "are": 0.1360321044921875, "many": 0.22219108045101166}, {"How": 0.4282990097999573, "there": 0.025678634643554688, "people": 0.05294736102223396, "are": 0.0352962389588356, "many": 0.43472832441329956}, {"How": 0.197061687707901, "there": 0.15292538702487946, "people": 0.14662881195545197, "are": 0.1489531695842743, "many": 0.19941569864749908}, {"How": 0.4522186517715454, "there": 0.018535032868385315, "people": 0.03913941606879234, "are": 0.023295419290661812, "many": 0.4493936598300934}, {"How": 0.2576112151145935, "there": 0.09665550291538239, "people": 0.1702575534582138, "are": 0.1327728033065796, "many": 0.25749289989471436}, {"How": 0.19601164758205414, "there": 0.12419392168521881, "people": 0.1930389106273651, "are": 0.17161670327186584, "many": 0.19888420403003693}, {"How": 0.14461077749729156, "there": 0.17123347520828247, "people": 0.1957329958677292, "are": 0.17673037946224213, "many": 0.14327062666416168}, {"How": 0.15827405452728271, "there": 0.16963249444961548, "people": 0.16059228777885437, "are": 0.18179403245449066, "many": 0.16182492673397064}, {"How": 0.4268346428871155, "there": 0.022784870117902756, "people": 0.06753532588481903, "are": 0.033132266253232956, "many": 0.4286213219165802}, {"How": 0.2071123570203781, "there": 0.14255791902542114, "people": 0.14183852076530457, "are": 0.16102829575538635, "many": 0.2103680819272995}, {"How": 0.29479557275772095, "there": 0.1276104897260666, "people": 0.0461249053478241, "are": 0.09515341371297836, "many": 0.3015291392803192}, {"How": 0.13141490519046783, "there": 0.2097122222185135, "people": 0.1279798299074173, "are": 0.18179450929164886, "many": 0.13115167617797852}, {"How": 0.3785710036754608, "there": 0.04827273264527321, "people": 0.08289594203233719, "are": 0.059700094163417816, "many": 0.38553428649902344}, {"How": 0.21764154732227325, "there": 0.1247338131070137, "people": 0.17624081671237946, "are": 0.14216384291648865, "many": 0.21796388924121857}, {"How": 0.14427310228347778, "there": 0.12421707808971405, "people": 0.283160001039505, "are": 0.19498929381370544, "many": 0.1426904797554016}, {"How": 0.2968258559703827, "there": 0.1266413778066635, "people": 0.052410103380680084, "are": 0.09407535940408707, "many": 0.29515233635902405}, {"How": 0.45977407693862915, "there": 0.013012013398110867, "people": 0.024914702400565147, "are": 0.017708197236061096, "many": 0.4723055362701416}, {"How": 0.4827568531036377, "there": 0.004992506001144648, "people": 0.011154329404234886, "are": 0.007590244058519602, "many": 0.48915624618530273}, {"How": 0.43721336126327515, "there": 0.02936193346977234, "people": 0.040885500609874725, "are": 0.02939731627702713, "many": 0.43365800380706787}, {"How": 0.2849530577659607, "there": 0.08103443682193756, "people": 0.14829429984092712, "are": 0.12511195242404938, "many": 0.2882562279701233}, {"How": 0.2676282823085785, "there": 0.08285171538591385, "people": 0.19134822487831116, "are": 0.11339365690946579, "many": 0.26919880509376526}, {"How": 0.449462354183197, "there": 0.014410276897251606, "people": 0.043772704899311066, "are": 0.023037170991301537, "many": 0.45603853464126587}, {"How": 0.4455772340297699, "there": 0.017488086596131325, "people": 0.041157517582178116, "are": 0.02785956673324108, "many": 0.45150431990623474}, {"How": 0.46772292256355286, "there": 0.013477945700287819, "people": 0.02920287661254406, "are": 0.01525324210524559, "many": 0.4605552554130554}, {"How": 0.2455986887216568, "there": 0.11316224932670593, "people": 0.1693369746208191, "are": 0.11933734267950058, "many": 0.24668827652931213}, {"How": 0.45095789432525635, "there": 0.01702544279396534, "people": 0.03015103191137314, "are": 0.02379162795841694, "many": 0.4623379409313202}, {"How": 0.3773990571498871, "there": 0.04594746232032776, "people": 0.08828005939722061, "are": 0.06260202080011368, "many": 0.38283655047416687}, {"How": 0.2699907422065735, "there": 0.07744181901216507, "people": 0.18349789083003998, "are": 0.12937429547309875, "many": 0.27093687653541565}, {"How": 0.1056797131896019, "there": 0.15561053156852722, "people": 0.2925749719142914, "are": 0.19333504140377045, "many": 0.10428503155708313}, {"How": 0.27166369557380676, "there": 0.09176881611347198, "people": 0.15706628561019897, "are": 0.12029124796390533, "many": 0.27322855591773987}, {"How": 0.2641192674636841, "there": 0.10043196380138397, "people": 0.16843436658382416, "are": 0.10539066791534424, "many": 0.26189830899238586}, {"How": 0.34904608130455017, "there": 0.0639820247888565, "people": 0.0982980951666832, "are": 0.0761125236749649, "many": 0.3514327108860016}, {"How": 0.3998900353908539, "there": 0.045503318309783936, "people": 0.05476589873433113, "are": 0.044084228575229645, "many": 0.4098108410835266}, {"How": 0.4296244978904724, "there": 0.02799558825790882, "people": 0.04711773246526718, "are": 0.03746660053730011, "many": 0.43132105469703674}, {"How": 0.3176287114620209, "there": 0.08807630091905594, "people": 0.0952264666557312, "are": 0.09163091331720352, "many": 0.3187151551246643}, {"How": 0.374458909034729, "there": 0.04936959221959114, "people": 0.09560243785381317, "are": 0.057460326701402664, "many": 0.37556615471839905}, {"How": 0.4375036656856537, "there": 0.026473604142665863, "people": 0.04731598123908043, "are": 0.032287582755088806, "many": 0.4309460520744324}, {"How": 0.366244375705719, "there": 0.07016903162002563, "people": 0.056791674345731735, "are": 0.06662876904010773, "many": 0.3681047558784485}, {"How": 0.09516341984272003, "there": 0.20949529111385345, "people": 0.16897770762443542, "are": 0.23910358548164368, "many": 0.09615844488143921}, {"How": 0.2590232193470001, "there": 0.11252128332853317, "people": 0.13033515214920044, "are": 0.12053429335355759, "many": 0.2672690153121948}, {"How": 0.438803106546402, "there": 0.023380516096949577, "people": 0.03854123130440712, "are": 0.025120319798588753, "many": 0.45118969678878784}, {"How": 0.2728334367275238, "there": 0.09434571862220764, "people": 0.16077516973018646, "are": 0.1092349961400032, "many": 0.27278295159339905}, {"How": 0.45921143889427185, "there": 0.012800308875739574, "people": 0.04068247973918915, "are": 0.016254877671599388, "many": 0.4586043655872345}, {"How": 0.4592859447002411, "there": 0.02089586853981018, "people": 0.03460036590695381, "are": 0.02314038947224617, "many": 0.4417238235473633}, {"How": 0.38609108328819275, "there": 0.040144532918930054, "people": 0.09283211082220078, "are": 0.056331101804971695, "many": 0.3840469419956207}, {"How": 0.42271557450294495, "there": 0.024820005521178246, "people": 0.06587588787078857, "are": 0.03557901084423065, "many": 0.42821165919303894}, {"How": 0.27567538619041443, "there": 0.08185174316167831, "people": 0.18295042216777802, "are": 0.10631005465984344, "many": 0.2769836485385895}, {"How": 0.11372169107198715, "there": 0.17500260472297668, "people": 0.2290796935558319, "are": 0.2034020870923996, "many": 0.11434059590101242}, {"How": 0.08648309111595154, "there": 0.19312678277492523, "people": 0.25027936697006226, "are": 0.19580776989459991, "many": 0.08805656433105469}, {"How": 0.3274550139904022, "there": 0.08293357491493225, "people": 0.08585833758115768, "are": 0.09440786391496658, "many": 0.3313991129398346}, {"How": 0.3510836064815521, "there": 0.06496261805295944, "people": 0.08555802702903748, "are": 0.07371238619089127, "many": 0.36360615491867065}, {"How": 0.23331411182880402, "there": 0.10008639097213745, "people": 0.20067113637924194, "are": 0.1393558830022812, "many": 0.24132336676120758}, {"How": 0.19261059165000916, "there": 0.14213161170482635, "people": 0.16331881284713745, "are": 0.17116357386112213, "many": 0.19798386096954346}, {"How": 0.4663954973220825, "there": 0.01149659976363182, "people": 0.02276507578790188, "are": 0.016767337918281555, "many": 0.4713178873062134}, {"How": 0.3243991732597351, "there": 0.06208892911672592, "people": 0.14818395674228668, "are": 0.08095189929008484, "many": 0.32337701320648193}, {"How": 0.2567301094532013, "there": 0.12636829912662506, "people": 0.1004248782992363, "are": 0.13320879638195038, "many": 0.2574520409107208}, {"How": 0.09993603825569153, "there": 0.2116955667734146, "people": 0.1677410900592804, "are": 0.2062562108039856, "many": 0.09929617494344711}, {"How": 0.42736655473709106, "there": 0.025240899994969368, "people": 0.06338758766651154, "are": 0.037078045308589935, "many": 0.42462587356567383}, {"How": 0.39615243673324585, "there": 0.057709503918886185, "people": 0.03846927359700203, "are": 0.04884527996182442, "many": 0.39853110909461975}, {"How": 0.3718448281288147, "there": 0.04671832546591759, "people": 0.10776816308498383, "are": 0.060433242470026016, "many": 0.36856815218925476}, {"How": 0.17275746166706085, "there": 0.1460917890071869, "people": 0.19957773387432098, "are": 0.1591900736093521, "many": 0.17458239197731018}, {"How": 0.43893444538116455, "there": 0.02278974838554859, "people": 0.05508170649409294, "are": 0.029468072578310966, "many": 0.43257951736450195}, {"How": 0.283185213804245, "there": 0.0717415064573288, "people": 0.18625912070274353, "are": 0.10997071117162704, "many": 0.28546255826950073}, {"How": 0.3823868930339813, "there": 0.06423740088939667, "people": 0.04003824666142464, "are": 0.0579904206097126, "many": 0.387624591588974}, {"How": 0.15526482462882996, "there": 0.18040458858013153, "people": 0.16594566404819489, "are": 0.1649114340543747, "many": 0.15638352930545807}, {"How": 0.4398796558380127, "there": 0.02152078039944172, "people": 0.04170340672135353, "are": 0.027248388156294823, "many": 0.4492521584033966}, {"How": 0.2551485300064087, "there": 0.098969466984272, "people": 0.16481845080852509, "are": 0.13701733946800232, "many": 0.25634172558784485}, {"How": 0.4717104434967041, "there": 0.00967545248568058, "people": 0.026057168841362, "are": 0.013401848264038563, "many": 0.4701310992240906}, {"How": 0.33361753821372986, "there": 0.08348493278026581, "people": 0.08177467435598373, "are": 0.07941889762878418, "many": 0.3346335291862488}, {"How": 0.3445877134799957, "there": 0.07520037889480591, "people": 0.07497160881757736, "are": 0.0799383744597435, "many": 0.35155877470970154}, {"How": 0.3740571141242981, "there": 0.05987394228577614, "people": 0.07544358819723129, "are": 0.055145263671875, "many": 0.3742755651473999}, {"How": 0.4499673843383789, "there": 0.018525008112192154, "people": 0.03932856023311615, "are": 0.020228015258908272, "many": 0.4529212415218353}, {"How": 0.24061834812164307, "there": 0.13216280937194824, "people": 0.11971504241228104, "are": 0.13332189619541168, "many": 0.24700197577476501}, {"How": 0.23667393624782562, "there": 0.13438037037849426, "people": 0.12995697557926178, "are": 0.12736216187477112, "many": 0.23729398846626282}, {"How": 0.3702143728733063, "there": 0.0542859248816967, "people": 0.08727500587701797, "are": 0.060418181121349335, "many": 0.3729260265827179}, {"How": 0.40644198656082153, "there": 0.03317653387784958, "people": 0.07670719921588898, "are": 0.042181290686130524, "many": 0.4100225865840912}, {"How": 0.41541293263435364, "there": 0.03160851076245308, "people": 0.06479311734437943, "are": 0.041525017470121384, "many": 0.4171020984649658}, {"How": 0.4229409396648407, "there": 0.03094983473420143, "people": 0.0547088198363781, "are": 0.0349653996527195, "many": 0.4253735840320587}, {"How": 0.3904353380203247, "there": 0.04297172650694847, "people": 0.08094725012779236, "are": 0.05152442306280136, "many": 0.39418089389801025}, {"How": 0.4386989176273346, "there": 0.021745404228568077, "people": 0.04786332696676254, "are": 0.030106376856565475, "many": 0.44157475233078003}, {"How": 0.07835971564054489, "there": 0.22185450792312622, "people": 0.17446815967559814, "are": 0.23040258884429932, "many": 0.08020080626010895}, {"How": 0.32008856534957886, "there": 0.08330968767404556, "people": 0.10493210703134537, "are": 0.08800819516181946, "many": 0.3238810896873474}, {"How": 0.39313146471977234, "there": 0.037381768226623535, "people": 0.0877910926938057, "are": 0.049155041575431824, "many": 0.39654847979545593}], "img_list": ["COCO_val2014_000000100001", "COCO_val2014_000000208050", "COCO_val2014_000000528821", "COCO_val2014_000000404263", "COCO_val2014_000000221303", "COCO_val2014_000000414934", "COCO_val2014_000000115823", "COCO_val2014_000000292464", "COCO_val2014_000000265677", "COCO_val2014_000000189197", "COCO_val2014_000000334511", "COCO_val2014_000000318585", "COCO_val2014_000000088436", "COCO_val2014_000000419344", "COCO_val2014_000000089027", "COCO_val2014_000000526186", "COCO_val2014_000000511599", "COCO_val2014_000000074241", "COCO_val2014_000000456199", "COCO_val2014_000000244197", "COCO_val2014_000000353321", "COCO_val2014_000000125556", "COCO_val2014_000000435012", "COCO_val2014_000000345520", "COCO_val2014_000000161799", "COCO_val2014_000000284749", "COCO_val2014_000000368459", "COCO_val2014_000000254828", "COCO_val2014_000000456968", "COCO_val2014_000000541055", "COCO_val2014_000000248206", "COCO_val2014_000000252135", "COCO_val2014_000000204206", "COCO_val2014_000000062566", "COCO_val2014_000000172946", "COCO_val2014_000000168355", "COCO_val2014_000000054763", "COCO_val2014_000000362852", "COCO_val2014_000000155811", "COCO_val2014_000000480311", "COCO_val2014_000000507080", "COCO_val2014_000000313922", "COCO_val2014_000000155644", "COCO_val2014_000000291551", "COCO_val2014_000000115521", "COCO_val2014_000000189566", "COCO_val2014_000000469085", "COCO_val2014_000000326541", "COCO_val2014_000000426238", "COCO_val2014_000000050926", "COCO_val2014_000000404546", "COCO_val2014_000000017869", "COCO_val2014_000000412204", "COCO_val2014_000000032901", "COCO_val2014_000000464098", "COCO_val2014_000000304924", "COCO_val2014_000000276215", "COCO_val2014_000000524681", "COCO_val2014_000000047516", "COCO_val2014_000000306139", "COCO_val2014_000000328462", "COCO_val2014_000000253474", "COCO_val2014_000000207108", "COCO_val2014_000000363241", "COCO_val2014_000000033697", "COCO_val2014_000000512151", "COCO_val2014_000000315991", "COCO_val2014_000000506751", "COCO_val2014_000000521669", "COCO_val2014_000000265789", "COCO_val2014_000000022213", "COCO_val2014_000000273855", "COCO_val2014_000000445766", "COCO_val2014_000000033683", "COCO_val2014_000000061722", "COCO_val2014_000000352478", "COCO_val2014_000000546052", "COCO_val2014_000000523033", "COCO_val2014_000000325873", "COCO_val2014_000000276024", "COCO_val2014_000000036451", "COCO_val2014_000000215072", "COCO_val2014_000000548246", "COCO_val2014_000000459195", "COCO_val2014_000000290750", "COCO_val2014_000000339177", "COCO_val2014_000000426165", "COCO_val2014_000000071826", "COCO_val2014_000000065455", "COCO_val2014_000000180011", "COCO_val2014_000000459182", "COCO_val2014_000000198530", "COCO_val2014_000000347506", "COCO_val2014_000000254869", "COCO_val2014_000000196421", "COCO_val2014_000000034464", "COCO_val2014_000000520264", "COCO_val2014_000000465007", "COCO_val2014_000000287914", "COCO_val2014_000000325483"], "top5_confidence_list": [], "q_list": ["How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?", "How many people are there?"], "q_id_list": ["1000012", "2080501", "5288211", "4042630", "2213032", "4149341", "1158231", "2924641", "2656771", "1891970", "3345110", "3185852", "884362", "4193442", "890270", "5261861", "5115992", "742411", "4561992", "2441971", "3533211", "1255560", "4350121", "3455202", "1617991", "2847490", "3684592", "2548281", "4569681", "5410552", "2482061", "2521352", "2042061", "625662", "1729461", "1683550", "547630", "3628521", "1558111", "4803112", "5070801", "3139221", "1556441", "2915511", "1155211", "1895661", "4690851", "3265412", "4262382", "509261", "4045462", "178692", "4122042", "329010", "4640982", "3049241", "2762152", "5246811", "475162", "3061391", "3284621", "2534741", "2071081", "3632410", "336972", "5121511", "3159911", "5067511", "5216692", "2657890", "222131", "2738552", "4457661", "336831", "617222", "3524782", "5460521", "5230331", "3258731", "2760242", "364512", "2150722", "5482462", "4591952", "2907501", "3391771", "4261652", "718261", "654552", "1800112", "4591821", "1985300", "3475062", "2548692", "1964212", "344642", "5202641", "4650072", "2879142", "3254832"], "gc_url_list": [], "vicki_answer_list": ["1", "3", "1", "2", "4", "5", "2", "3", "lot", "1", "5", "5", "5", "5", "5", "3", "11", "2", "5", "2", "5", "2", "2", "2", "1", "lot", "2", "3", "1", "3", "2", "2", "2", "5", "5", "5", "3", "2", "6", "15", "9", "2", "5", "3", "2", "2", "3", "2", "3", "5", "5", "3", "3", "5", "3", "1", "2", "5", "3", "5", "5", "lot", "4", "3", "1", "1", "3", "3", "2", "2", "9", "3", "2", "1", "7", "5", "3", "1", "3", "3", "5", "2", "5", "3", "5", "3", "3", "3", "15", "3", "2", "3", "5", "4", "5", "4", "5", "1", "3", "3"], "gt_answer_list": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
+        var form_url = "/toaim/fp/submit/training/xai";
+        var static_path = "/What do you think an AI today can do__files/images/";
+        var xai = "QI Attention";
+    </script>
+    <script src="./What do you think an AI today can do__files/base_helpers.js"></script>
+    <script src="./What do you think an AI today can do__files/feedback_helpers.js"></script>
+    <script src="./What do you think an AI today can do__files/qi_attention_training_with_feedback_helpers.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-array.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-collection.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-color.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-format.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-interpolate.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-time.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-time-format.v2.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-scale.v1.min.js"></script>
+    <script>
+
+    var legend = d3.scaleSequential(function(t) {
+        return d3.hsl(t * 360, 1, 0.5) + "";
+    });
+    $("#legend").attr(legend);
+    </script>
+<script>
+Mousetrap.bind(['ctrl+d', 'ctrl+d'], function() {
+    prev(0);
+});
+Mousetrap.bind(['ctrl+j', 'ctrl+j'], function() {
+    if ( scene_choice_dict[q_id_list[cur_scene]].choice ) {
+        next(1);
+    } else {
+        next(0);
+    }
+});
+Mousetrap.bind(['ctrl+e', 'ctrl+e'], function() {
+    proceed('correctly');
+});
+Mousetrap.bind(['ctrl+i', 'ctrl+i'], function() {
+    proceed('wrongly');
+});
+
+</script><style type="text/css">
+#title {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+
+#VickiText {
+    position: relative;
+    right: 17vw;
+}
+
+/* Side nav goes below title bar */
+
+.side-nav {
+    z-index: -1;
+    width: 820px;
+    height: 550px;
+}
+
+.side-nav li {
+    height: 4px;
+}
+
+nav .nav-wrapper {
+    background: #3B5998 !important;
+}
+
+#chat-list {
+    min-height: 30vh;
+    max-height: 60vh;
+}
+
+.card-panel {
+    position: relative;
+    right: 2vw;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    width: 50vw;
+    display: inline-block;
+}
+
+#counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+#correctButton:hover,
+#correctButton.hovered {
+    background-color: #33FF00 !important;
+    box-shadow: 1px 1px 10px 5px gray !important;
+}
+
+#wrongButton:hover,
+#wrongButton.hovered {
+    background-color: #FF0000 !important;
+    box-shadow: 1px 1px 10px 5px gray !important;
+}
+
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+table th td {
+    text-align: center;
+}
+
+#shortcutsPC {
+    position: relative;
+    top: 10vh;
+}
+
+.shortcuts-panel {
+    float: center;
+    text-align: center;
+    align-content: center;
+}
+
+.shortcuts {
+    max-width: 55px;
+    max-height: 25px;
+}
+
+.shortcuts img {
+    max-width: 55px;
+    max-height: 25px;
+}
+
+img#sceneImg {
+    height: 350px;
+    width: 100%;
+}
+#bot{
+    height: 140px;
+}
+img#qiAttentionImg {
+    width: 100%;
+    height: 350px;
+}
+.btn:focus,
+.btn:active {
+    outline: none !important;
+}
+</style></head>
+
+
+
+
+<body>
+        
+    <style type="text/css">
+    td, th {
+        padding: 3px 5px;
+    }
+    </style>
+
+    <div class="row header_row" style="margin-bottom: 0px;">
+        <div class="col s2">
+            <img id="bot" class="right img-responsive" src="./What do you think an AI today can do__files/bot.png">
+        </div>
+
+        <div class="col s7" style="padding-bottom: 0px; width:62.3333%;">
+            <div class="card black-text grey lighten-3" style="border-radius: 20px; font-size:16px;">
+                <div class="card-content center">
+                    <p>Hi, my name is <b><font color="blue">Vicki</font></b>. I am an <b>Artificial Intelligence (AI)</b>. I am trained to answer questions about images.
+                    <br> Based on your understanding and expectations of what you think AI today can do,
+                    <br><b><font color="red">Do you think I will answer this question for this image correctly or wrongly?</font></b><br><span class="red-text">Read the instructions below to learn more! </span><span class="orange-text">We will pay you a bonus if you make accurate guesses often!</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s3" style="width:21%;">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-field="id" colspan="2">Keyboard shortcuts</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Next / Continue</td>
+                        <td>Ctrl + j</td>
+                    </tr>
+                    <tr>
+                        <td>Previous</td>
+                        <td>Ctrl + d</td>
+                    </tr>
+                    <tr>
+                        <td>Correctly</td>
+                        <td>Ctrl + e</td>
+                    </tr>
+                    <tr>
+                        <td>Wrongly</td>
+                        <td>Ctrl + i</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col s12 center">
+            <a class="red center modal-trigger waves-effect waves-light btn showInstructions">Click here to see instructions!</a>            
+        </div>
+
+    </div>
+    <!-- Modal Structure -->
+<div id="instructionsModal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Instructions</h4>
+        <p style="font-size: 16px;">1. The question will remain the same across all images in the HIT.</p>
+        <p style="font-size: 16px;">2. There will be <b>two phases</b> in this HIT. In the first phase, after each question, we will show you whether Vicki answered it correctly or wrongly. We hope that this will give you a better sense for Vicki’s behavior and help you make more accurate guesses.</p> 
+        <p style="font-size: 16px;">3. The second phase will be a <i>test</i> phase, in which the task will be the same but we will no longer show you Vicki's actual answer. <b>We will pay you a bonus if you do a good job with making accurate guesses!</b></p> 
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+    </div>
+</div>
+
+<div id="beginTestMsg" class="modal">
+    <div class="modal-content">
+        <h4></h4><h4>Your accuracy for Phase 1 is <span id="finalScore"></span>/<span id="trainSetLengthFinal"></span></h4>
+        <h5><font color="red">Please read the instructions below before proceeding.</font></h5>
+        <h5><p>Thank you for your guesses so far. We hope that the hints have helped you understand Vicki better. Now, we enter the <i>test</i> phase where we will evaluate how well you have learned to guess Vicki's responses for the question about an image. We will no longer show you if Vicki answered the question correctly or wrongly, and you cannot return to the images from Phase 1. At the end of the HIT, we will show you your score for this phase.
+</p>
+        <p><font color="red">Remember: If you do well at guessing, we will pay you a bonus!</font></p></h5>
+    </div>
+    <div class="modal-footer">
+        <a class=" modal-action modal-close waves-effect waves-green btn-flat">Dismiss<i class="material-icons right">send</i></a>
+    </div>
+</div>
+    
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Your accuracy for Phase 2 is <span id="testScore"></span>/<span id="testSetLengthFinal"></span>.
+        </h4><h4>Please let us know your thoughts/comments</h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="hit_comment" class="materialize-textarea"></textarea>
+                        <label for="hit_comment">Comments</label>
+                    </div>
+                </div>
+            </form>
+        </div> 
+    </div>
+    <div class="modal-footer">
+        <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit_btn">Submit<i class="material-icons right">send</i></a>
+        <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="back_btn">Back<i class="material-icons left">undo</i></a> -->
+    </div>
+</div>
+
+<script>
+$(".showInstructions").click(function(){
+    $('#instructionsModal').openModal();
+});
+</script>
+        <p class="center green-text" style="font-size: 22px;">Hint: The color of an image region on the right tells you how much attention I'm paying to that region. The color of the question on top of the image tells you how much attention I'm paying to that word. I hope this helps you guess better!</p>
+        <div class="container">
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col s2">
+                    <a id="prevButton" class="waves-effect waves-dark btn btn-large blue-text white">Previous</a>
+                </div>
+                <div class="col s8">
+                    <h5 class="center"><span id="phaseNumber">Phase 1: </span><span id="curScene">1</span>/<span id="num_scenes_per_hit">50</span> <span id="question"><span style="color:rgb(0, 60, 170)" ;="">How</span> <span style="color:rgb(0, 60, 170)" ;="">many</span> <span style="color:rgb(128, 0, 0)" ;="">people</span> <span style="color:rgb(255, 255, 0)" ;="">are</span> <span style="color:rgb(5, 255, 255)" ;="">there</span> ?</span></h5>
+                </div>
+                <div class="col s2">
+                    <a id="nextButton" class="waves-effect waves-light btn btn-large blue-text white">Next</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col s5 text-center">
+                <img id="sceneImg" class="img-responsive img-thumbnail center-block" src="./What do you think an AI today can do__files/COCO_val2014_000000100001.jpg" alt="Image Loading..." responsive="">
+            </div>
+            <div class="col s5 text-center">
+                <img id="qiAttentionImg" class="img-responsive img-thumbnail center-block" src="./What do you think an AI today can do__files/COCO_val2014_000000100001_1000012_q.jpg" alt="Image Loading..." responsive="">
+            </div>
+            <div class="col s2">
+                
+<div class="col s3">
+	<br>
+	<br>
+	<img src="./What do you think an AI today can do__files/qilegend.png" height="300px" class="img img-responsive">
+</div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s3 offset-s2 green-text" style="text-align: right; margin-top: 0px;">
+                <div id="score">
+                    <h5>Score: <span id="curAcc">0</span>/<span id="trainSetLength">50</span></h5>  
+                </div>
+            </div>
+            <div class="col s6" id="display-answer" style="display: none;">
+                <div class="col s7" id="answer-label" style="height:50px;"></div>
+                <div class="col s3 state-button text-center buttonHolder" style="text-align:center; display:inline-block">
+                    <button id="continueButton" class="btn btn-success" style="margin-left:5px;">Continue</button>
+                </div>
+            </div>
+            <div class="col s1 offset-s1 center">
+                <a id="correctButton" class="btn btn-large green">Correctly</a>
+            </div>
+            <div class="col s1 offset-s1 center">
+                <a id="wrongButton" class="red btn btn-large">Wrongly</a>
+            </div>
+        </div>
+
+    <!--Some code to extract HIT information from the URL and set the form accordingly.
+    This shouldn't need to be changed.-->
+    <!-- Modal Structure -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h4>Thank you for your participation</h4>
+            <p>Your HIT has been successfully submitted!</p>
+        </div>
+        <div class="modal-footer">
+            <!-- <a href="javascript:close_window();" class=" modal-action waves-effect waves-light btn-flat">Close Tab</a> -->
+        </div>
+    </div>
+    <script type="text/javascript">
+
+    $('#nextButton').bind('click', function() {
+        next(0);
+    });
+    $('#prevButton').bind('click', function() {
+        prev(0);
+    });
+    $('#correctButton').bind('click', function() {
+        proceed('correctly');
+    });
+    $('#wrongButton').bind('click', function() {
+        proceed('wrongly');
+    });
+    $('#continueButton').bind('click', function() {
+        next(1);
+    });
+    // ===========================================================
+    // disable paste on input text // More as reference for future use
+    // ===========================================================
+    $(document).ready(function() {
+        $(document).on("paste", "#dialog-confirm", function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Submit Hit -- Modal
+    $("#submit_btn").click(function() {
+        submit_form();
+        console.log("Form submitted successfully");
+    });
+
+    // back_btn
+    $("#back_btn").click(function() {
+        console.log("Going back to task");
+    });
+    </script>
+    <script>
+    $(window).load(init())
+
+    function close_window() {
+        if (confirm("Close Window?")) {
+            close();
+        }
+    }
+    </script>
+    <script type="text/javascript">
+        var total_split_size = 100;
+        var phase_size = total_split_size/2;
+        $("#num_scenes_per_hit").html(phase_size);
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53104159-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div class="hiddendiv common"></div></body></html>

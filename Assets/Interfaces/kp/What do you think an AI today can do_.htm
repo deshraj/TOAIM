@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>What do you think an AI today can do?</title>
+    <link rel="stylesheet" href="./What do you think an AI today can do__files/materialize.min.css">
+    <link href="./What do you think an AI today can do__files/icon" rel="stylesheet">
+    <link href="./What do you think an AI today can do__files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./What do you think an AI today can do__files/selectize.default.min.css">
+    <meta name="description" content="AMT interface: What do you think an AI today can do?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./What do you think an AI today can do__files/helper_funcs.js"></script>
+    <script type="text/javascript" src="./What do you think an AI today can do__files/jquery-2.1.1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/selectize.min.js"></script>
+    <script src="./What do you think an AI today can do__files/jquery-ui.min.js"></script>
+    <script src="./What do you think an AI today can do__files/materialize.min.js"></script>
+    <script src="./What do you think an AI today can do__files/mousetrap.min.js"></script>
+    <script type="text/javascript">
+    var JSON_LOADED = {
+        "gt_acc_list": [],
+        "montage_list": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+        "img_list": ["COCO_val2014_000000320706", "COCO_val2014_000000296730", "COCO_val2014_000000564283", "COCO_val2014_000000235902", "COCO_val2014_000000574376", "COCO_val2014_000000556158", "COCO_val2014_000000446920", "COCO_val2014_000000581022", "COCO_val2014_000000379542", "COCO_val2014_000000483182", "COCO_val2014_000000497660", "COCO_val2014_000000056400", "COCO_val2014_000000332570", "COCO_val2014_000000504498", "COCO_val2014_000000393225", "COCO_val2014_000000163333", "COCO_val2014_000000466410", "COCO_val2014_000000262394", "COCO_val2014_000000160892", "COCO_val2014_000000262993", "COCO_val2014_000000166426", "COCO_val2014_000000163361", "COCO_val2014_000000296848", "COCO_val2014_000000074092", "COCO_val2014_000000409125", "COCO_val2014_000000128516", "COCO_val2014_000000054763", "COCO_val2014_000000250592", "COCO_val2014_000000495541", "COCO_val2014_000000373793", "COCO_val2014_000000489763", "COCO_val2014_000000502776", "COCO_val2014_000000367622", "COCO_val2014_000000268396", "COCO_val2014_000000569825", "COCO_val2014_000000232931", "COCO_val2014_000000568981", "COCO_val2014_000000088252", "COCO_val2014_000000526364", "COCO_val2014_000000360346", "COCO_val2014_000000366510", "COCO_val2014_000000221571", "COCO_val2014_000000576770", "COCO_val2014_000000580796", "COCO_val2014_000000005001", "COCO_val2014_000000300206", "COCO_val2014_000000309467", "COCO_val2014_000000236246", "COCO_val2014_000000100409", "COCO_val2014_000000147624", "COCO_val2014_000000052637", "COCO_val2014_000000187495", "COCO_val2014_000000428125", "COCO_val2014_000000320670", "COCO_val2014_000000086602", "COCO_val2014_000000165500", "COCO_val2014_000000251317", "COCO_val2014_000000284257", "COCO_val2014_000000083574", "COCO_val2014_000000071737", "COCO_val2014_000000060431", "COCO_val2014_000000455188", "COCO_val2014_000000376959", "COCO_val2014_000000187647", "COCO_val2014_000000485897", "COCO_val2014_000000347950", "COCO_val2014_000000546160", "COCO_val2014_000000184405", "COCO_val2014_000000127585", "COCO_val2014_000000054654", "COCO_val2014_000000254123", "COCO_val2014_000000000711", "COCO_val2014_000000357552", "COCO_val2014_000000327532", "COCO_val2014_000000466005", "COCO_val2014_000000350463", "COCO_val2014_000000237060", "COCO_val2014_000000400994", "COCO_val2014_000000562557", "COCO_val2014_000000001164", "COCO_val2014_000000198139", "COCO_val2014_000000305050", "COCO_val2014_000000421131", "COCO_val2014_000000554500", "COCO_val2014_000000354307", "COCO_val2014_000000236268", "COCO_val2014_000000239857", "COCO_val2014_000000056932", "COCO_val2014_000000560700", "COCO_val2014_000000371683", "COCO_val2014_000000052368", "COCO_val2014_000000140921", "COCO_val2014_000000076731", "COCO_val2014_000000355569", "COCO_val2014_000000011081", "COCO_val2014_000000558101", "COCO_val2014_000000015345", "COCO_val2014_000000295491", "COCO_val2014_000000357526", "COCO_val2014_000000271025"],
+        "q_list": ["What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?", "What are the people doing?"],
+        "q_id_list": ["352", "377", "375", "390", "370", "381", "355", "397", "353", "369", "361", "354", "367", "394", "383", "362", "400", "351", "357", "384", "373", "356", "388", "387", "389", "380", "385", "372", "398", "371", "368", "379", "393", "391", "382", "365", "399", "392", "359", "396", "374", "376", "386", "366", "364", "378", "395", "363", "358", "360", "1130", "1143", "1142", "1127", "1133", "1108", "1118", "1144", "1119", "1102", "1147", "1146", "1140", "1111", "1117", "1105", "1110", "1123", "1129", "1103", "1126", "1148", "1106", "1116", "1145", "1138", "1128", "1137", "1112", "1121", "1132", "1136", "1135", "1101", "1125", "1115", "1149", "1131", "1109", "1150", "1141", "1122", "1139", "1134", "1113", "1120", "1124", "1104", "1114", "1107"],
+        "vicki_answer_list": ["cooking", "standing", "cooking", "standing", "surfing", "skiing", "playing baseball", "playing wii", "skateboarding", "skateboarding", "skateboarding", "talking on phone", "texting", "standing", "cooking", "standing", "sitting", "standing", "standing", "playing", "eating", "flying", "skiing", "playing tennis", "brushing teeth", "surfing", "skateboarding", "skateboarding", "skiing", "bathroom", "skiing", "playing tennis", "surfing", "standing", "playing baseball", "standing", "skateboarding", "eating", "cooking", "skateboarding", "cooking", "sleeping", "playing wii", "standing", "playing wii", "surfing", "skiing", "standing", "playing wii", "posing", "playing tennis", "walking", "standing", "sleeping", "skateboarding", "grazing", "playing frisbee", "playing wii", "reading", "eating", "playing baseball", "cooking", "reading", "sleeping", "eating", "standing", "flying kite", "flying kites", "sitting", "cooking", "skateboarding", "sitting", "standing", "playing tennis", "flying", "talking", "skateboarding", "surfing", "surfing", "swimming", "standing", "standing", "walking", "playing wii", "sleeping", "sitting", "skiing", "standing", "skateboarding", "standing", "sitting", "surfing", "working", "standing", "flying", "grazing", "eating", "cutting cake", "standing", "sitting"],
+        "gt_answer_list": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    };
+    var form_url = "/toaim/fp/submit/training/xai";
+    var static_path = "/What do you think an AI today can do__files/images/";
+    var xai = "";
+    </script>
+    <script src="./What do you think an AI today can do__files/d3-array.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-collection.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-color.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-format.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-interpolate.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-time.v1.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-time-format.v2.min.js"></script>
+    <script src="./What do you think an AI today can do__files/d3-scale.v1.min.js"></script>
+    <script>
+    var legend = d3.scaleSequential(function(t) {
+        return d3.hsl(t * 360, 1, 0.5) + "";
+    });
+    $("#legend").attr(legend);
+    </script>
+    <script>
+    Mousetrap.bind(['ctrl+j', 'ctrl+j'], function() {
+        prev(0);
+    });
+    Mousetrap.bind(['ctrl+k', 'ctrl+k'], function() {
+        next(0);
+    });
+    Mousetrap.bind(['enter'], function() {
+        // console.log("event triggered");
+        if (scene_choice_dict[q_id_list[cur_scene]].choice) {
+            next(1);
+        } else if (($("#answer").val() != "") && ($("#answer").val() != "Select from below options")) {
+            var selected = $("#answer").val();
+            proceed(selected);
+        } else {
+            Materialize.toast('Please enter a valid answer!', 1500);
+        }
+    });
+    </script>
+    <script src="./What do you think an AI today can do__files/base_helpers.js"></script>
+    <script src="./What do you think an AI today can do__files/feedback_helpers.js"></script>
+    <script src="./What do you think an AI today can do__files/qi_Train_kp_preset.js"></script>
+</head>
+
+<body>
+    <style type="text/css">
+    td,
+    th {
+        padding: 13px 5px;
+    }
+    
+    #title {
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: 300 !important;
+    }
+    
+    #VickiText {
+        position: relative;
+        right: 17vw;
+    }
+    
+    #chat-list {
+        min-height: 30vh;
+        max-height: 60vh;
+    }
+    
+    .card-panel {
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    #counter {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 26px;
+    }
+    
+    #shortcutsPC {
+        position: relative;
+        top: 10vh;
+    }
+    
+    .shortcuts-panel {
+        float: center;
+        text-align: center;
+        align-content: center;
+    }
+    
+    .shortcuts {
+        max-width: 55px;
+        max-height: 25px;
+    }
+    
+    .shortcuts img {
+        max-width: 55px;
+        max-height: 25px;
+    }
+    
+    img#sceneImg {
+        height: 350px;
+        width: 90%;
+    }
+    #bot{
+        height: 200px;
+    }
+    img#qiAttentionImg {
+        width: 90%;
+        height: 350px;
+    }
+    
+    img#gradcamImg {
+        width: 90%;
+        height: 350px;
+    }
+    
+    #answer-selectized,
+    .option {
+        font-size: 16px;
+    }
+    
+    .card .card-content {
+        padding: 0;
+    }
+    
+    .selectize-control.single .selectize-input:after {
+        display: none;
+    }
+    
+    .selectize-input {
+        line-height: 45px;
+    }
+    
+    .header_row {
+        margin-bottom: 0;
+    }
+    </style>
+    <div class="row header_row">
+        <div class="col s2">
+            <img id="bot" class="right img-responsive" src="./What do you think an AI today can do__files/bot.png">
+        </div>
+        <div class="col s7" style="width:62.3333%;">
+            <div class="card card-panel black-text grey lighten-3">
+                <div class="card-content">
+                    <p>Hi, my name is <b><font color="blue">Vicki</font></b>. I am an <b>Artificial Intelligence (AI)</b>. I am trained to answer questions about images.
+                        <br>
+                        <b class="red-text">The catch is -- I can only give one of a 1000 answers!</b>
+                        <br> Based on your understanding and expectations of what you think AI today can do,
+                        <br><b><font class="blue-text">Which one of the 1000 items in the drop down list will be my answer to this question for this image?<br>Below are important instructions about the task and interface. <span class="red-text">Be sure to read them!</span></font></b>
+                        <br><span class="orange-text">We will pay you a bonus if you make accurate guesses often!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s3" style="padding-left: 25px; width:21%;">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-field="id" colspan="2">Keyboard shortcuts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Next</td>
+                        <td>Ctrl+k</td>
+                    </tr>
+                    <tr>
+                        <td>Previous</td>
+                        <td>Ctrl+j</td>
+                    </tr>
+                    <tr>
+                        <td>Submit/Continue</td>
+                        <td>Enter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="col s6 center">
+                <a class="red center modal-trigger waves-effect waves-light btn showInstructions">Click here to see instructions!</a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="instructionsModal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Instructions</h4>
+            <p style="font-size: 16px;">1. The question will remain the same across all images in the HIT.</p>
+            <p style="font-size: 16px;">2. Please note that Vicki can say only one of a 1000 things which are listed in the dropdown. So there are only 1000 "valid answers".</p>
+            <p style="font-size: 16px;">3. As you type in the textbox, the dropdown will be updated to show the list of valid answers based on the text that you entered. Please select a valid answer. The interface will let you progress to the next task only if the answer is a valid answer (something that Vicki can say).</p>
+            <p style="font-size: 16px;">4. There will be <b>two phases</b> in this HIT. In the first phase, after each question, we will show you what Vicki's actual answer was. We hope that this will give you a better sense for Vicki’s behavior and help you make more accurate guesses.</p>
+            <p style="font-size: 16px;">5. The second phase will be a <i>test</i> phase, in which the task will be the same but we will no longer show you Vicki's actual answer. <b>We will pay you a bonus if you do a good job with making accurate guesses!</b></p>
+            <p style="font-size: 16px;">6. Please note that at times, a question may not be relevant to the image e.g., "What color is the cat?" for an image with no cat in it. In such cases, Vicki still had to answer -- making its best guess among one of the 1000 valid answers that made the most sense. For instance, it might decide to name the color of the thing that looks most like a cat or name the dominant color of the image, etc. In these cases, you'll have to guess what Vicki's guess most likely was.</p>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="display: flex; align-items: center;">
+            <div class="col s2">
+                <a id="prevButton" class="waves-effect waves-dark btn btn-large blue-text white">Previous</a>
+            </div>
+            <div class="col s8">
+                <h5 class="center"><span id="phaseNumber">Phase 1: </span><span id="curScene">1</span>/<span id="num_scenes_per_hit">50</span> <span id="question">What are the people doing?</span></h5>
+            </div>
+            <div class="col s2">
+                <a id="nextButton" class="waves-effect waves-light btn btn-large blue-text white">Next</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <img id="sceneImg" class="img-responsive img-thumbnail center-block" src="./What do you think an AI today can do__files/COCO_val2014_000000320706.jpg" alt="Image Loading..." responsive="">
+            </div>
+            <div class="col s6">
+                <div class="col s12 green-text" style="text-align: center;">
+                    <div id="score">
+                        <h5>Score: <span id="curAcc">0</span>/<span id="trainSetLength">50</span></h5>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h5 class="center red-text">Warning! Don’t answer the question yourself! Tell us what you think Vicki’s answer will be.</h5>
+                </div>
+                <div class="input-field col s8">
+                    <span style="font-size: 18px;"><b>I think Vicki's answer would be:</b></span>
+                    <select id="answer" placeholder="Start typing answer here..." tabindex="-1" style="display: none;" class="selectized">
+                        <option value="" selected="selected"></option>
+                    </select>
+                </div>
+                <div class="col s4 center" style="margin-top: 45px;">
+                    <a style="width: 120px;" class="waves-effect waves-light blue btn btn-large center" id="answerSelectBtn">Submit</a>
+                </div>
+                <div class="col s4 center">
+                    <a class="waves-effect waves-light blue btn btn-large center" id="continueBtn" style="display:none;">Continue</a>
+                </div>
+                <div class="col s12" id="display-answer" style="display: none;">
+                    <h5><div class="col s12" id="answer-label"></div></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Your accuracy for Phase 2 is <span id="testScore"></span>/<span id="testSetLengthFinal"></span>.
+        </h4>
+            <h4>Please let us know your thoughts/comments</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="hit_comment" class="materialize-textarea"></textarea>
+                            <label for="hit_comment">Comments</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit_btn">Submit<i class="material-icons right">send</i></a>
+            <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="back_btn">Back<i class="material-icons left">undo</i></a> -->
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <style type="text/css">
+    .selectize-control.single .selectize-input:after {
+        display: none;
+    }
+    
+    .selectize-input {
+        line-height: 45px;
+    }
+    
+    #answer-selectized,
+    .option {
+        font-size: 16px;
+    }
+    
+    .card .card-content {
+        padding: 0;
+    }
+    </style>
+    <script type="text/javascript">
+
+    $('#nextButton').bind('click', function() {
+        next(0);
+    });
+    $('#prevButton').bind('click', function() {
+        prev(0);
+    });
+
+
+    $(document).ready(function() {
+        $(document).on("paste", "#dialog-confirm", function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Submit Hit -- Modal
+    $("#submit_btn").one("click", function() {
+        submit_form();
+        console.log("Form submitted successfully");
+    });
+
+    // back_btn
+    $("#back_btn").click(function() {
+        console.log("Going back to task");
+    });
+    </script>
+    <script>
+    $(window).load(init())
+
+    function close_window() {
+        if (confirm("Close Window?")) {
+            close();
+        }
+    }
+    </script>
+    <script type="text/javascript">
+    var answers = ["Select from below options", "0", "1", "10 feet", "10", "100", "11", "12", "13", "14", "15", "150", "16", "17", "18", "19", "2 feet", "2", "20", "200", "2013", "21", "22", "23", "24", "25", "26", "27", "28", "29", "3 feet", "3", "30", "32", "33", "35", "38", "4", "40", "44", "45", "5", "50", "55", "6", "60", "7", "8", "9", "a", "above", "adidas", "adult", "africa", "african", "afternoon", "air", "airplane", "airport", "all", "american", "animals", "apartment", "apple", "apples", "apron", "army", "art", "asia", "asian", "asphalt", "at camera", "australia", "away", "b", "baby", "back", "background", "backpack", "bacon", "bag", "bags", "bakery", "balance", "ball", "banana", "bananas", "bandana", "bar", "barbed wire", "barn", "baseball bat", "baseball field", "baseball", "basil", "basket", "basketball", "bat", "bathroom", "batter", "batting", "beach", "bear", "beard", "bears", "bed", "bedroom", "beef", "beer", "behind fence", "behind", "beige", "bell", "bench", "bib", "bicycle", "bicycles", "big ben", "big", "bike", "bikes", "bikini", "bird", "birds", "birthday", "black and red", "black and white", "black and yellow", "black", "blanket", "blender", "blinds", "blonde", "blue and white", "blue and yellow", "blue", "bmw", "boat", "boats", "book", "books", "boots", "both", "bottle", "bottom", "bow", "bowl", "bowling", "box", "boy", "bracelet", "branch", "bread", "breakfast", "brick", "bricks", "bridge", "british airways", "british", "broccoli", "broken", "brown and white", "brown", "brushing teeth", "bucket", "building", "bull", "bulldog", "bun", "bus stop", "bus", "business", "butter", "butterfly", "c", "cake", "calico", "california", "calm", "camera", "camouflage", "can", "canada", "candle", "candles", "candy", "car", "cardboard", "cargo", "carpet", "carriage", "carrot", "carrots", "cars", "cart", "cat", "catcher", "catching frisbee", "catching", "cats", "ceiling", "cell phone", "cell phones", "center", "ceramic", "chain link", "chain", "chair", "chairs", "chandelier", "checkered", "cheese", "cheesecake", "chef", "cherry", "chicago", "chicken", "chihuahua", "child", "children", "china", "chinese", "chips", "chocolate", "chopsticks", "christmas", "church", "cigarette", "circle", "circles", "city", "clay", "clean", "cleaning", "clear", "cleats", "clock tower", "clock", "closed", "clothes", "clouds", "cloudy", "coca cola", "coffee", "coke", "cold", "collar", "collie", "color", "commercial", "computer", "concrete", "cone", "cones", "controller", "cook", "cookies", "cooking", "corn", "corner", "couch", "counter", "cow", "cowboy", "cows", "crane", "cross country", "cross", "crosswalk", "cucumber", "cumulus", "cup", "cupcake", "curly", "cutting board", "cutting cake", "cutting", "daisies", "daisy", "dark", "day", "daytime", "decoration", "deer", "dell", "delta", "desert", "desk", "dessert", "diamond", "dining room", "dinner", "dirt bike", "dirt", "dirty", "do not enter", "dock", "dodgers", "dog", "dogs", "donut", "donuts", "door", "double decker", "down", "downhill", "dress", "drinking", "driving", "dry", "duck", "ducks", "dunkin donuts", "dusk", "eagle", "east", "eating", "egg", "eggs", "electric", "electricity", "elephant", "elephants", "emirates", "empty", "england", "english", "europe", "evening", "face", "fake", "fall", "fan", "farm", "fast", "fedex", "fedora", "fell", "female", "fence", "field", "finch", "fire hydrant", "fire truck", "fire", "fireplace", "fish", "fishing", "flag", "flags", "flip flops", "floor", "floral", "flower", "flowers", "flying kite", "flying kites", "flying", "foil", "food", "football", "ford", "foreground", "fork and knife", "fork", "forward", "france", "french fries", "french", "fridge", "fries", "frisbee", "front", "fruit", "full", "game", "garage", "garbage", "gas", "german shepherd", "german", "germany", "giants", "giraffe", "giraffes", "girl", "glass", "glasses", "glazed", "glove", "gloves", "go", "goat", "goggles", "gold", "golden retriever", "good", "gothic", "graffiti", "granite", "grapes", "grass", "gray and white", "gray", "grazing", "green and white", "green and yellow", "green", "grill", "ground", "guitar", "hair dryer", "hair", "half", "halloween", "ham", "hand", "handle", "happy", "harley davidson", "harley", "harness", "hat", "hats", "hay", "head", "headband", "headphones", "heart", "hello kitty", "helmet", "helmets", "high", "hit ball", "home", "honda", "horns", "horse", "horses", "hospital", "hot dog", "hot dogs", "hot", "hotel", "house", "hungry", "hydrant", "i don't know", "ice cream", "ice", "in air", "in bowl", "in field", "in water", "india", "indian", "indoors", "inside", "italian", "italy", "jacket", "japan", "jeans", "jet", "jump", "jumping", "ketchup", "keyboard", "kia", "kids", "kitchen", "kite flying", "kite", "kites", "knife", "krispy kreme", "lab", "ladder", "lake", "lamp", "landing", "laptop", "laptops", "large", "laying down", "laying", "leash", "leather", "leaves", "left", "lemon", "lettuce", "library", "light", "lighthouse", "lights", "lilies", "lion", "little", "living room", "log", "london", "long", "lot", "lots", "low", "luggage", "lunch", "m", "magnets", "male", "man on left", "man on right", "man", "many", "maple", "marble", "market", "mask", "mcdonald's", "meat", "medium", "men", "mercedes", "metal", "microphone", "microwave", "middle", "military", "milk", "mirror", "modern", "monkey", "morning", "motorcycle", "motorcycles", "mountain", "mountains", "mouse", "moving", "mozzarella", "museum", "mushrooms", "mustard", "napkin", "navy", "necklace", "net", "new york", "newspaper", "night", "nighttime", "nike", "nintendo", "no one", "no parking", "no", "nokia", "none", "noon", "north", "nothing", "nowhere", "oak", "obama", "ocean", "octagon", "off", "office", "oil", "old", "olives", "on bed", "on building", "on counter", "on desk", "on floor", "on grass", "on ground", "on left", "on plate", "on right", "on sidewalk", "on street", "on table", "on tower", "on tracks", "on wall", "on", "one on left", "one on right", "one way", "onions", "open", "orange and white", "orange juice", "orange", "oranges", "orioles", "out", "outdoor", "outdoors", "outside", "oval", "oven", "overcast", "owl", "owner", "p", "paint", "painting", "palm", "panda", "paper", "parade", "parasailing", "park", "parked", "parking lot", "parking meter", "parking", "parrot", "parsley", "party", "passenger", "pasta", "peace", "pelican", "pen", "people", "pepper", "pepperoni", "peppers", "pepsi", "person", "phone", "phones", "photographer", "piano", "pickle", "pickles", "picture", "pictures", "pier", "pig", "pigeon", "pigeons", "pillow", "pilot", "pine", "pineapple", "pink", "pitcher", "pitching", "pizza cutter", "pizza", "plaid", "plane", "plant", "plants", "plastic", "plate", "playing baseball", "playing frisbee", "playing game", "playing tennis", "playing wii", "playing", "polar bear", "polar", "pole", "poles", "police", "polka dot", "polka dots", "polo", "ponytail", "poodle", "pork", "posing", "pot", "potatoes", "power lines", "protection", "public", "pug", "purple", "purse", "racing", "racket", "railing", "rain", "rainbow", "raining", "rainy", "ramp", "reading", "real", "rectangle", "red and black", "red and blue", "red and green", "red and white", "red and yellow", "red sox", "red white and blue", "red", "reflection", "refrigerator", "remote", "restaurant", "resting", "rice", "riding", "right", "ring", "river", "road", "rock", "rocks", "roman numerals", "roman", "rope", "rose", "roses", "round", "rug", "running", "runway", "rural", "sad", "safety", "sailboat", "salad", "samsung", "san francisco", "sand", "sandals", "sandwich", "sandwiches", "santa", "sauce", "sausage", "scarf", "school", "scissors", "scooter", "seagull", "seagulls", "selfie", "serve", "serving", "setting", "shade", "shadow", "shallow", "sheep", "shelf", "ship", "shirt", "shoe", "shoes", "short", "shorts", "shower", "shrimp", "siamese", "sidewalk", "sign", "silver", "sink", "sitting", "skate park", "skateboard", "skateboarder", "skateboarding", "skateboards", "ski lift", "ski poles", "ski", "skier", "skiing", "skis", "skull", "sky", "sleeping", "slow", "small", "smile", "smiling", "smoke", "smoothie", "sneakers", "snow", "snowboard", "snowboarding", "snowy", "soccer ball", "soccer", "soda", "sony", "soup", "south", "spanish", "sparrow", "spinach", "spoon", "spring", "sprinkles", "square", "stainless steel", "stairs", "standing", "star", "starbucks", "stars", "station", "statue", "steak", "steam", "steel", "stick", "stone", "stool", "stop sign", "stop", "store", "stove", "straight", "straw", "strawberries", "strawberry", "street", "string", "striped", "stripes", "stuffed animal", "stuffed animals", "subway", "sugar", "suit", "suitcase", "suitcases", "summer", "sun", "sunglasses", "sunny", "sunset", "surf", "surfboard", "surfboards", "surfer", "surfing", "suv", "swan", "sweater", "swimming", "swinging", "t", "tabby", "table", "tag", "tail", "taking off", "taking picture", "talking on phone", "talking", "tall", "tan", "tank top", "tattoo", "taxi", "tea", "teddy bear", "teddy bears", "tennis ball", "tennis court", "tennis racket", "tennis rackets", "tennis", "terrier", "texting", "thin", "throwing", "tie", "tiger", "tile", "toaster oven", "toilet paper", "toilet", "tomato", "tomatoes", "toothbrush", "toothbrushes", "top", "towel", "towels", "tower", "toy", "toyota", "tracks", "traffic light", "traffic", "train station", "train", "transportation", "trash can", "trash", "traveling", "tray", "tree", "trees", "triangle", "truck", "tulips", "turkey", "tusks", "tv", "twin", "typing", "umbrella", "umbrellas", "umpire", "united states", "united", "unknown", "up", "uphill", "urban", "usa", "van", "vanilla", "vase", "vases", "vegetable", "vegetables", "vertical", "very tall", "very", "vest", "visor", "volleyball", "w", "wagon", "waiting", "walking", "wall", "warm", "washington dc", "washington", "watch", "watching tv", "watching", "water bottle", "water skiing", "water", "watermelon", "wave", "waves", "wedding", "west", "wet", "wetsuit", "white and black", "white and blue", "white and brown", "white and red", "white", "wicker", "wii controller", "wii remote", "wii", "wild", "wilson", "wind", "window", "windows", "wine glass", "wine", "winter", "wire", "wires", "woman", "women", "wood", "wooden", "woods", "wool", "work", "working", "x", "yellow and black", "yellow and blue", "yellow and red", "yellow and white", "yellow", "yes", "young", "zebra", "zebras", "zoo"];
+
+    for (var i = 0; i < answers.length; i++) {
+        $('select').append('<option value="' + answers[i] + '">' + answers[i] + '</option>');
+    }
+
+    $('select').selectize({
+        // sortField: 'text',
+        create: false,
+        items: [" "]
+    });
+    $("#answer-selectized").val("");
+    $("#answer-selectized").focus();
+    </script>
+    <script type="text/javascript">
+    $("#answerSelectBtn").click(function() {
+        if ($("#answer").val() && ($("#answer").val() != "Select from below options")) {
+            scene_choice_dict[q_id_list[cur_scene]].choice = $("#answer").val();
+            proceed($("#answer").val());
+        } else {
+            Materialize.toast('Please enter a valid answer!', 1500);
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    $(".showInstructions").click(function() {
+        $('#instructionsModal').openModal();
+    });
+    </script>
+    <div id="beginTestMsg" class="modal">
+        <div class="modal-content">
+            <h4></h4>
+            <h4>Your accuracy for Phase 1 is <span id="finalScore"></span>/<span id="trainSetLengthFinal"></span></h4>
+            <h5><font color="red">Please read the instructions below before proceeding.</font></h5>
+            <h5><p>Thank you for your guesses so far. We hope that the hints have helped you understand Vicki better. Now, we enter the <i>test</i> phase where we will evaluate how well you have learned to guess Vicki's responses for the question about an image. We will no longer show you what Vicki’s actual answer was, and you cannot return to the images from Phase 1. At the end of the HIT, we will show you your score for this phase.
+        </p>
+        <p><font color="red">Remember: If you do well at guessing, we will pay you a bonus!</font></p></h5>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Dismiss<i class="material-icons right">send</i></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $("#continueBtn").click(function() {
+        next(1);
+    });
+    </script>
+    <script type="text/javascript">
+    var total_split_size = 100;
+    var phase_size = total_split_size / 2;
+    $("#num_scenes_per_hit").html(phase_size);
+    </script>
+    <div class="hiddendiv common"></div>
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53104159-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
