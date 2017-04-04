@@ -14,7 +14,7 @@
 
 ## Arxiv Link
 
-Coming Soon
+https://arxiv.org/abs/1704.00717
 
 ## License
 
