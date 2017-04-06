@@ -16,6 +16,19 @@
 
 https://arxiv.org/abs/1704.00717
 
+## Citing this work
+
+If you find this work useful in your research, please consider citing:
+
+```
+@misc{1704.00717,
+Author = {Arjun Chandrasekaran and Deshraj Yadav and Prithvijit Chattopadhyay and Viraj Prabhu and Devi Parikh},
+Title = {It Takes Two to Tango: Towards Theory of AI's Mind},
+Year = {2017},
+Eprint = {arXiv:1704.00717},
+}
+```
+
 ## License
 
 [MIT](https://github.com/deshraj/TOAIM/blob/master/LICENSE)
