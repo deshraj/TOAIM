@@ -21,11 +21,11 @@ https://arxiv.org/abs/1704.00717
 If you find this work useful in your research, please consider citing:
 
 ```
-@misc{1704.00717,
-Author = {Arjun Chandrasekaran and Deshraj Yadav and Prithvijit Chattopadhyay and Viraj Prabhu and Devi Parikh},
-Title = {It Takes Two to Tango: Towards Theory of AI's Mind},
-Year = {2017},
-Eprint = {arXiv:1704.00717},
+@article{toaim,
+  author = {Arjun Chandrasekaran and Deshraj Yadav and Prithvijit Chattopadhyay and Viraj Prabhu and Devi Parikh},
+  title = {{I}t {T}akes {T}wo to {T}ango: {T}owards {T}heory of {AI}'s {M}ind},
+  journal = {arXiv preprint arXiv:1704.00717},
+  year = {2017}
 }
 ```
 
